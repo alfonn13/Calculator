@@ -27,8 +27,7 @@ body{
     width: 500px;
     height: 650px;
     border-radius: 1rem;
-    justify-content: center;
-    align-items: center;
+    margin: 0 auto;
     gap: 10px;
 }
 
@@ -52,6 +51,7 @@ body{
     width: 6rem;
     height: 3.2rem; 
     cursor: pointer;
+    margin: 0 auto;
 }
 
 .btn:hover{
