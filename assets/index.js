@@ -7,7 +7,7 @@ botones.forEach(boton => {
         const botonApretado = boton.textContent;
 
         if(boton.id === "c"){
-            pantalla.textContent = "0";
+            pantalla.textContent = 0;
             return;
         }
 
@@ -17,6 +17,42 @@ botones.forEach(boton => {
             }else{
                 pantalla.textContent = pantalla.textContent.slice(0, -1);
             }
+            return;
+        }
+
+        if(boton.id === "raiz"){
+            const numeroPantalla = parseFloat(pantalla.textContent);
+            if(!isNaN(numeroPantalla)|| numeroPantalla>=0){
+                pantalla.textContent = Math.sqrt(numeroPantalla);
+            }else{
+                pantalla.textContent = ("Error!!");
+            }
+            return;
+            
+        }
+
+        if(boton.id==="elevado"){
+            const numeroPantalla = parseFloat(pantalla.textContent);
+            if(!isNaN(numeroPantalla) || numeroPantalla>=0){
+                pantalla.textContent = Math.pow(numeroPantalla, 2);
+            }else{
+                pantalla.textContent = ("Error!!");
+            }
+            return;
+        }
+
+        if(boton.id==="porcentaje"){
+            const numeroPantalla = parseFloat(pantalla.textContent);
+            if(!isNaN(numeroPantalla) || numeroPantalla>=0){
+                pantalla.textContent = numeroPantalla/100;
+            }else{
+                pantalla.textContent = ("Error!!");
+            }
+            return;
+        }
+
+        if(boton.id==="change"){
+            pantalla.textContent = - pantalla.textContent;
             return;
         }
 
