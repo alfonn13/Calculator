@@ -1,3 +1,9 @@
+/*
+Alfonso Reviejo Valle
+GitHub: https://github.com/alfonn13/Calculator
+
+*/
+
 const pantalla = document.querySelector(".pantalla");
 const botones =document.querySelectorAll(".btn");
 
@@ -13,7 +19,7 @@ botones.forEach(boton => {
                 pantalla.textContent = 0;
                 break;
 
-            case "borrar":
+            case "delete":
                 if (pantalla.textContent.length === 1 || pantalla.textContent === "Error") {
                     pantalla.textContent = "0";
                 } else {
@@ -21,7 +27,7 @@ botones.forEach(boton => {
                 }
                 break;
 
-            case "raiz":
+            case "root":
                 numeroPantalla = parseFloat(pantalla.textContent);
                 if (!isNaN(numeroPantalla) || numeroPantalla >= 0) {
                     pantalla.textContent = Math.sqrt(numeroPantalla);
@@ -30,7 +36,7 @@ botones.forEach(boton => {
                 }
                 break;
 
-            case "elevado":
+            case "elevated":
                 numeroPantalla = parseFloat(pantalla.textContent);
                 if (!isNaN(numeroPantalla) || numeroPantalla >= 0) {
                     pantalla.textContent = Math.pow(numeroPantalla, 2);
@@ -39,7 +45,7 @@ botones.forEach(boton => {
                 }
                 break;
 
-            case "entre":
+            case "on":
                 numeroPantalla = parseFloat(pantalla.textContent);
                 if (!isNaN(numeroPantalla) || numeroPantalla >= 0) {
                     pantalla.textContent = 1 / numeroPantalla;
@@ -48,7 +54,7 @@ botones.forEach(boton => {
                 }
                 break;
 
-            case "porcentaje":
+            case "percentage":
                 numeroPantalla = parseFloat(pantalla.textContent);
                 if (!isNaN(numeroPantalla) || numeroPantalla >= 0) {
                     pantalla.textContent = numeroPantalla / 100;
@@ -61,7 +67,7 @@ botones.forEach(boton => {
                 pantalla.textContent = -pantalla.textContent;
                 break;
 
-            case "igual":
+            case "equal":
                 try {
                     pantalla.textContent = eval(pantalla.textContent);
                 } catch {
