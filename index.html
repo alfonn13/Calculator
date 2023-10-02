@@ -8,37 +8,47 @@
 </head>
 <body>
     
-    <h2 class="title">Calculadora</h2>
-    
     <div class="calculadora">
-        <div class="pantalla">0</div>       
-        <button class="btn" id="porcentaje">%</button>
-        <button class="btn" id="c">CE</button>
-        <button class="btn" id="c">C</button>
-        <button class="btn" id="borrar">←</button>
-        <button class="btn">1/x</button>
-        <button class="btn" id="elevado">x <sup>2</sup></button>
-        <button class="btn" id="raiz">√X</button>
-        <button class="btn">/</button>
-        <button class="btn">7</button>
-        <button class="btn">8</button>
-        <button class="btn">9</button>
-        <button class="btn">*</button>
-        <button class="btn">4</button>
-        <button class="btn">5</button>
-        <button class="btn">6</button>
-        <button class="btn">-</button>
-        <button class="btn">1</button>
-        <button class="btn">2</button>
-        <button class="btn">3</button>
-        <button class="btn">+</button>
-        <button class="btn" id="change">+/-</button>
-        <button class="btn">0</button>
-        <button class="btn">,</button>
-        <button class="btn" id="igual">=</button>
+
+        <div class="overlay">
+            <img src="assets/calculadora.png" alt="calculadora" class="calcu">
+            <p class="name">Calculadora</p>
+        </div>
+
+        <div class="over">
+            <img src="assets/burgericon.png" alt="burger" class="burger">
+            <h3 class="h3">Estandar</h3>
+        </div>
+        
+
+        <div class="pantalla light">0</div>       
+        <button class="btn dark" id="porcentaje">%</button>
+        <button class="btn dark" id="PI">π</button>
+        <button class="btn dark" id="c">C</button>
+        <button class="btn dark" id="borrar">←</button>
+        <button class="btn dark" id="entre">1/x</button>
+        <button class="btn dark" id="elevado">x <sup>2</sup></button>
+        <button class="btn dark" id="raiz">√X</button>
+        <button class="btn dark">/</button>
+        <button class="btn light">7</button>
+        <button class="btn light">8</button>
+        <button class="btn light">9</button>
+        <button class="btn dark">*</button>
+        <button class="btn light">4</button>
+        <button class="btn light">5</button>
+        <button class="btn light">6</button>
+        <button class="btn dark">-</button>
+        <button class="btn light">1</button>
+        <button class="btn light">2</button>
+        <button class="btn light">3</button>
+        <button class="btn dark">+</button>
+        <button class="btn light" id="change">+/-</button>
+        <button class="btn light">0</button>
+        <button class="btn light" id=".">.</button>
+        <button class="btn equal" id="igual">=</button>
 
     </div>
 
-    <script src="assets/index.js"></script>
+    <script src="scripts/index.js"></script>
 </body>
 </html>
