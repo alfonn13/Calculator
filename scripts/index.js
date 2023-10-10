@@ -5,7 +5,8 @@ GitHub: https://github.com/alfonn13/Calculator
 */
 
 const pantalla = document.querySelector(".pantalla");
-const botones =document.querySelectorAll(".btn");
+const botones = document.querySelectorAll(".btn");
+let nuevaOperacion = true;
 
 
 botones.forEach(boton => {
@@ -34,6 +35,7 @@ botones.forEach(boton => {
                 } else {
                     pantalla.textContent = ("Error!!");
                 }
+                nuevaOperacion = true;
                 break;
 
             case "elevated":
@@ -43,6 +45,7 @@ botones.forEach(boton => {
                 } else {
                     pantalla.textContent = ("Error!!");
                 }
+                nuevaOperacion = true;
                 break;
 
             case "on":
@@ -52,6 +55,7 @@ botones.forEach(boton => {
                 } else {
                     pantalla.textContent = ("Error!!");
                 }
+                nuevaOperacion = true;
                 break;
 
             case "percentage":
@@ -61,15 +65,22 @@ botones.forEach(boton => {
                 } else {
                     pantalla.textContent = ("Error!!");
                 }
+                nuevaOperacion = true;
                 break;
 
             case "change":
                 pantalla.textContent = -pantalla.textContent;
+                nuevaOperacion = true;
+                break;
+
+            case "divide":
+                pantalla.textContent += "/";
                 break;
 
             case "equal":
                 try {
                     pantalla.textContent = eval(pantalla.textContent);
+                    nuevaOperacion = true;
                 } catch {
                     pantalla.textContent = ("Error!!");
                 }
@@ -81,14 +92,17 @@ botones.forEach(boton => {
                 } else {
                      pantalla.textContent = parseFloat(pantalla.textContent) * Math.PI;
                 }
+                nuevaOperacion = true;
                 break;
-                
-
 
             default:
-                if (pantalla.textContent === "0") {
+                if(pantalla.textContent !== "0" && (botonApretado ==="+" || botonApretado ==="-" || botonApretado ==="*" || botonApretado ==="÷")){
+                    nuevaOperacion = false;
+                }
+                if(pantalla.textContent === "0" || nuevaOperacion){
                     pantalla.textContent = botonApretado;
-                } else {
+                    nuevaOperacion = false;
+                }else{
                     pantalla.textContent += botonApretado;
                 }
                 break;

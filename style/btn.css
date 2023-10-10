@@ -30,7 +30,12 @@
 .btn.equal{
     background-color: #73BBEB;
     color: black;
+    font-size: 20px;
 }
 .btn.equal:hover{
     background-color:#4C7C9C;
+}
+
+.btn.dark.operator{
+    font-size: 20px;
 }
